@@ -1,0 +1,105 @@
+/* Nollställer standardmarginaler och padding samt sätter typsnitt */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* Centrerar innehållet på sidan */
+body {
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    overflow-y: scroll;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.dragspelsmeny-låda {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 1rem;
+    padding: 0;
+    max-width: 30rem;
+    width: 100%;
+}
+
+.dragspelsmeny-ul {
+    width: 100%;
+    padding: 0;
+}
+
+.dragspelsmeny-ul li {
+    list-style-type: none;
+    width: 100%;
+    margin: 1.25rem 0;
+    padding: 0.6rem;
+    border-radius: 8px;
+    /*skuggeffekt */
+    box-shadow: 7px 7px 13px rgba(0, 0, 0, 0.2),
+        -7px -7px 13px rgba(255, 255, 255, 0.8);
+}
+
+.dragspelsmeny-ul li label {
+    display: flex;
+    align-items: center;
+    padding: 0.6rem;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Visar + framför varje rubrik */
+label::before {
+    content: '+';
+    margin-left: 0.2rem;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+input[type='checkbox'] {
+    display: none;
+}
+
+.dragspelsmeny-innehåll p {
+    margin-bottom: 1rem;
+}
+/*stängning*/
+.dragspelsmeny-ul .dragspelsmeny-innehåll {
+    max-height: 0;
+    overflow: hidden;
+    transition: all 1s ease;
+    padding: 0 0.625rem;
+}
+
+.dragspelsmeny-ul .bild-innehåll {
+    transition: all 2s ease;
+}
+/*öppning*/
+.dragspelsmeny-ul
+    input[type='checkbox']:checked
+    + label
+    + .dragspelsmeny-innehåll {
+    max-height: 800px;
+    padding: 0.625rem 0.625rem 1.25rem;
+    transition: all 1.8s ease;
+}
+
+/* Ändrar + till – när fliken är öppen */
+.dragspelsmeny-ul input[type='checkbox']:checked + label::before {
+    content: '-';
+}
+/* Styling för produktbilden */
+#produkt-bild {
+    margin-top: 0.5rem;
+    width: 100%;
+    height: auto;
+    overflow-y: hidden;
+    border-radius: 8px;
+}
+
+.bild-kredit {
+    margin-top: 0.5rem;
+}
