@@ -1,10 +1,10 @@
-/* Nollställer standardmarginaler och padding samt sätter typsnitt */
+/* Nollställer standardmarginaler och padding */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
-/* Centrerar innehållet på sidan */
+/* Centrerar innehållet på sidan samt tillägger padding */
 body {
     background-color: white;
     display: flex;
@@ -64,7 +64,7 @@ input[type='checkbox'] {
 }
 
 .dragspelsmeny-innehåll p {
-    margin-bottom: 1rem;
+    margin-top: 1rem;
 }
 /*stängning*/
 .dragspelsmeny-ul .dragspelsmeny-innehåll {
@@ -74,9 +74,6 @@ input[type='checkbox'] {
     padding: 0 0.625rem;
 }
 
-.dragspelsmeny-ul .bild-innehåll {
-    transition: all 2s ease;
-}
 /*öppning*/
 .dragspelsmeny-ul
     input[type='checkbox']:checked
@@ -84,13 +81,14 @@ input[type='checkbox'] {
     + .dragspelsmeny-innehåll {
     max-height: 800px;
     padding: 0.625rem 0.625rem 1.25rem;
-    transition: all 1.8s ease;
+    transition: max-height 1.3s ease, padding 0.5s ease;
 }
 
 /* Ändrar + till – när fliken är öppen */
 .dragspelsmeny-ul input[type='checkbox']:checked + label::before {
     content: '-';
 }
+
 /* Styling för produktbilden */
 #produkt-bild {
     margin-top: 0.5rem;
