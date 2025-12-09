@@ -15,7 +15,7 @@ body {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.dragspelsmeny-låda {
+.dragspelsmeny-lada {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,11 +63,11 @@ input[type='checkbox'] {
     display: none;
 }
 
-.dragspelsmeny-innehåll p {
+.dragspelsmeny-innehall p {
     margin-top: 1rem;
 }
 /*stängning*/
-.dragspelsmeny-ul .dragspelsmeny-innehåll {
+.dragspelsmeny-ul .dragspelsmeny-innehall {
     max-height: 0;
     overflow: hidden;
     transition: all 1s ease;
@@ -78,7 +78,7 @@ input[type='checkbox'] {
 .dragspelsmeny-ul
     input[type='checkbox']:checked
     + label
-    + .dragspelsmeny-innehåll {
+    + .dragspelsmeny-innehall {
     max-height: 800px;
     padding: 0.625rem 0.625rem 1.25rem;
     transition: max-height 1.3s ease, padding 0.5s ease;
