@@ -10,12 +10,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
     overflow-y: scroll;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 10%;
 }
 
-.dragspelsmeny-låda {
+.dragspelsmeny-lada {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -63,14 +63,14 @@ input[type='checkbox'] {
     display: none;
 }
 
-.dragspelsmeny-innehåll p {
+.dragspelsmeny-innehall p {
     margin-top: 1rem;
 }
 /*stängning*/
-.dragspelsmeny-ul .dragspelsmeny-innehåll {
+.dragspelsmeny-ul .dragspelsmeny-innehall {
     max-height: 0;
     overflow: hidden;
-    transition: all 1s ease;
+    transition: all 0.7s ease;
     padding: 0 0.625rem;
 }
 
@@ -78,10 +78,10 @@ input[type='checkbox'] {
 .dragspelsmeny-ul
     input[type='checkbox']:checked
     + label
-    + .dragspelsmeny-innehåll {
+    + .dragspelsmeny-innehall {
     max-height: 800px;
     padding: 0.625rem 0.625rem 1.25rem;
-    transition: max-height 1.3s ease, padding 0.5s ease;
+    transition: max-height 0.4s ease, padding 0s ease;
 }
 
 /* Ändrar + till – när fliken är öppen */
